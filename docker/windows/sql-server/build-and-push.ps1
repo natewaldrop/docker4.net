@@ -1,5 +1,5 @@
 
-$image='docker4dotnet/sql-server:2017'
+$image='natewaldrop/sql-server-express:2019'
 $versions='ltsc2019','1903','1909','2004','20H2'
 
 foreach($version in $versions) {

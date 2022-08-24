@@ -2,11 +2,17 @@ version: '3.8'
 
 services:  
   signup-db:
-    image: docker4dotnet/sql-server:2017
+    image: mcr.microsoft.com/mssql/server:2017-latest
     environment:
       - sa_password=docker4.net!
+      - MSSQL_SA_PASSWORD=docker4.net!
+      - ACCEPT_EULA=Y
     networks:
       - signup-net
+    deploy:
+      resources:
+        limits:
+          memory: 2G
 
   signup-web:
     image: signup-web:02-06

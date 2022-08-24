@@ -4,6 +4,7 @@ FROM mcr.microsoft.com/windows/servercore:$WINVER
 SHELL ["powershell", "-Command", "$ErrorActionPreference = 'Stop'; $ProgressPreference = 'SilentlyContinue';"]
 
 ARG DOWNLOAD_URL="https://go.microsoft.com/fwlink/?linkid=829176"
+# https://download.microsoft.com/download/7/f/8/7f8a9c43-8c8a-4f7c-9f92-83c18d96b681/SQL2019-SSEI-Expr.exe
 
 ENV sa_password="_" `
     sa_password_path="C:\ProgramData\Docker\secrets\sa-password"

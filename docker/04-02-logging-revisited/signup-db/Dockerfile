@@ -12,6 +12,7 @@ ADD https://dotnetbinaries.blob.core.windows.net/servicemonitor/${SERVICEMONITOR
 FROM docker4dotnet/sql-server:2017
 
 ENV SA_PASSWORD="docker4.net!"
+ENV MSSQL_SA_PASSWORD="docker4.net!"
 
 COPY --from=logmonitor /LogMonitor.exe /LogMonitor.exe
 COPY --from=servicemonitor /ServiceMonitor.exe /ServiceMonitor.exe
